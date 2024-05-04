@@ -2241,19 +2241,19 @@ a.btn.disabled,
 fieldset:disabled a.btn {
     pointer-events: none
 }
-
+/* Lanlan: Start Modifying Color 4 */
 .btn-primary {
     color: #fff;
-    background-color: #4b6660;
-    border-color: #4b6660
+    background-color: #737373;
+    border-color: #737373
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #3b504b;
-    border-color: #354944
+    background-color: #333333;
+    border-color: #000000
 }
-
+/* Lanlan: End Modifying Color 4 */
 .btn-primary.focus,
 .btn-primary:focus {
     box-shadow: 0 0 0 .2rem rgba(75, 102, 96, .5)
@@ -2507,17 +2507,19 @@ fieldset:disabled a.btn {
 .show>.btn-light.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem rgba(248, 249, 250, .5)
 }
-
+/* Lanlan: Color 5 */
 .btn-dark {
     color: #fff;
-    background-color: #343a40;
-    border-color: #343a40
+    background-color: #343A40BF;
+    border-color: #343A40BF
 }
-
+/* Lanlan: Color 5 */
 .btn-dark:hover {
     color: #fff;
     background-color: #23272b;
-    border-color: #1d2124
+    border-color: #1d2124;
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color
 }
 
 .btn-dark.focus,
@@ -3084,14 +3086,14 @@ tbody.collapse.show {
     background-color: transparent;
     border: 0
 }
-
+/* Lanlan: Start Modifying Color 3 */
 .dropdown-item:focus,
 .dropdown-item:hover {
     color: #16181b;
     text-decoration: none;
-    background-color: #f8f9fa
+    background-color: #bcc0c4
 }
-
+/* Lanlan: Finish Modifying Color 3 */
 .dropdown-item.active,
 .dropdown-item:active {
     color: #fff;
@@ -3617,17 +3619,20 @@ tbody.collapse.show {
     margin-bottom: 0;
     list-style: none
 }
-
+/* Lanlan: Start Modifying Color 2 */
 .nav-link {
+    color: #dfdfdf !important;
     display: block;
     padding: .5rem 1rem
 }
 
 .nav-link:focus,
 .nav-link:hover {
-    text-decoration: none
+    text-decoration: none;
+    color: #343a40 !important;
+    background-color: #dfdfdf
 }
-
+/* Lanlan: Finish Modifying Color 2*/
 .nav-link.disabled {
     color: #6c757d
 }
@@ -4080,16 +4085,25 @@ tbody.collapse.show {
 .navbar-dark .navbar-nav .show>.nav-link {
     color: #fff
 }
-
+/* Lanlan: nav buttons */
 .navbar-dark .navbar-toggler {
     color: hsla(0, 0%, 100%, .5);
     border-color: hsla(0, 0%, 100%, .1)
+}
+
+.navbar-dark .navbar-toggler:hover {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color
 }
 
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
 }
 
+.navbar-dark .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+/* Lanlan: nav buttons */
 .navbar-dark .navbar-text {
     color: hsla(0, 0%, 100%, .5)
 }
@@ -8182,9 +8196,9 @@ button.bg-dark:hover {
 .text-white {
     color: #fff !important
 }
-
+/* Lanlan: Start Modifying Color 1 */
 .text-primary {
-    color: #4b6660 !important
+    color: #333333 !important
 }
 
 a.text-primary:focus,
@@ -8193,9 +8207,9 @@ a.text-primary:hover {
 }
 
 .text-secondary {
-    color: #6c757d !important
+    color: #555F62 !important
 }
-
+/* Lanlan: Finish Modifying Color 1 */
 a.text-secondary:focus,
 a.text-secondary:hover {
     color: #545b62 !important
