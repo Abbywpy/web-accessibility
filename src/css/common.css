@@ -55,3 +55,29 @@ body a:hover {
 .main {
     flex: 1 0 auto
 }
+
+/* Task 3.6
+Style for skip link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 100;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s;
+}
+
+.skip-link:focus {
+    opacity: 1; /* Makes the skip link visible when focused */
+}
+
+.skip-link:focus:not(:focus-visible) {
+    opacity: 0; /* Hides the skip link when focus is removed */
+}
+
+.skip-link:focus-visible {
+    outline: 2px solid #fff; /* Add a focus outline for keyboard users */
+}
