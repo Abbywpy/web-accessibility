@@ -37,11 +37,11 @@ function toggleNavigation(event) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var dropDownToggles =
         document.querySelectorAll('#nav-bar-content .dropdown-toggle');
 
-        for (var i = 0; i < dropDownToggles.length; i++) {
+    for (var i = 0; i < dropDownToggles.length; i++) {
         dropDownToggles[i].addEventListener('click', openMenu, false);
     }
 
@@ -70,3 +70,47 @@ document.getElementById('font-increase-button').addEventListener('click', increa
 document.getElementById('font-increase-button-1').addEventListener('click', increaseFontSize);
 document.getElementById('font-decrease-button').addEventListener('click', decreaseFontSize);
 document.getElementById('font-decrease-button-1').addEventListener('click', decreaseFontSize);
+
+// Task 3.5 - Menu Keyboard Interaction
+// Automatically close the submenu when the user presses the ESC key and focus on the menu header
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        // Check if any submenu is open
+        var openSubmenus = document.querySelectorAll('.dropdown-menu.show');
+        if (openSubmenus.length > 0) {
+            // Close the submenu
+            openSubmenus.forEach(function (submenu) {
+                submenu.classList.remove('show');
+            });
+            // Focus on the menu header
+            var menuHeaders = document.querySelectorAll('.nav-link.dropdown-toggle');
+            if (menuHeaders.length > 0) {
+                menuHeaders[0].focus();
+            }
+        }
+    }
+});
+
+// Allow activation of menu items using the SPACE key in addition to the ENTER key
+document.querySelectorAll('.nav-link').forEach(function (link) {
+    link.addEventListener('keydown', function (event) {
+        if (event.key === ' ' || event.key === 'Spacebar') {
+            event.preventDefault();
+            this.click();
+        }
+    });
+});
+
+// Close inactive menus when navigating outside using the TAB key
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Tab') {
+        // Check if any submenu is open
+        var openSubmenus = document.querySelectorAll('.dropdown-menu.show');
+        if (openSubmenus.length > 0) {
+            // Close the submenu
+            openSubmenus.forEach(function (submenu) {
+                submenu.classList.remove('show');
+            });
+        }
+    }
+});

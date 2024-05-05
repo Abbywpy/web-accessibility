@@ -8,20 +8,25 @@
     <title>Lorem Ipsum Institute of Technolgoy</title>
     <link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">   
 </head>
 
 <body class="d-flex flex-column bg-light">
-    <header class="header" role="banner"><!-- Lanlan: use 'header' as HTML5 semantic tags; Add 'class="header"' for old browsers -->
-        <div class="container-fluid d-none d-lg-block my-4"><!-- Lanlan -->
+    <header class="header" role="banner"><!-- use 'header' as HTML5 semantic tags; Add 'class="header"' for old browsers -->
+        <div class="container-fluid d-none d-lg-block my-4">
+        <!-- Task 3.6-->
+        <!-- Skip links -->
+        <a href="#nav-bar-content" class="skip-link">Skip to navigation</a>
+        <a href="#main" class="skip-link">Skip to main content</a>
+        <a href="#footer" class="skip-link">Skip to footer</a>
             <div class="container">
                 <div class="row no-gutters">
                     <div class="col-8 media">
                         <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg">
                         <div class="media-body align-self-center">
-                            <h1 class="mb-0 title">Lorem Ipsum<!-- Lanlan -->
+                            <h1 class="mb-0 title">Lorem Ipsum
                                 <br>Institute of Technology
-                            </h1><!-- Lanlan -->
+                            </h1>
                         </div>
                     </div>
                     <div class="col-4">
@@ -35,10 +40,13 @@
                 </div>
             </div>
         </div>
-    </header><!-- Lanlan -->
+    </header>
 
-    <nav class="nav" role="navigation"><!-- Lanlan -->
-        <div class="container-fluid bg-dark"><!-- Lanlan -->
+
+    <!-- Task 3.3-->
+    <!-- Change to <nav> for main navigation container -->
+    <nav class="nav" role="navigation">
+        <div class="container-fluid bg-dark">
             <div class="container">
                 <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                     <div class="navbar-brand d-lg-none">
@@ -48,62 +56,76 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="nav-bar-content">
+                        <!-- Change to <ul> for main menu -->                
                         <div class="navbar-nav mr-auto">
-                            <div class="nav-item">
-                                <a class="nav-link" href="./">Homepage</a>
-                            </div>
-                            <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
-                                <div class="dropdown-menu">
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
-                                    </div>
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
-                                    </div>
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
-                                    </div>
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                                    </div>
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
-                                <div class="dropdown-menu">
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                                    </div>
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                                    </div>
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                                    </div>
-                                    <div>
-                                        <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
-                                <div class="dropdown-menu">
-                                    <div>
+                            <ul class="navbar-nav mr-auto">
+                                <!-- Main menu items -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">Homepage</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <!-- Task 3.4 -->
+                                    <!-- Add aria attributes for screenreader -->
+                                    <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" aria-haspopup="true" aria-expanded="false">
+                                        Faculties
+                                    </a>
+                                    <!-- Sub-menu represented as nested <ul> -->
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <!-- Task 3.4 -->
+                                    <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" aria-haspopup="true" aria-expanded="false">
+                                        Education &amp; research
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <li class="nav-item dropdown">
+                                <!-- Task 3.4 -->
+                                <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" aria-haspopup="true" aria-expanded="false">
+                                    Industry &amp; partners
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
                                         <a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                         <div class="navbar-nav">
                             <div class="nav-item">
                                 <a class="nav-link" href="./login.html">Login</a>
@@ -121,21 +143,24 @@
                 </div>
             </div>
         </div>
-    </nav><!-- Lanlan -->
+    </nav>
 
-    <main class="main" role="main"><!-- Lanlan -->
-        <div class="container"><!-- Lanlan -->
+    <main class="main" role="main" id="main">
+        <div class="container">
             <div class="row no-gutters">
                 <div class="col-12 col-lg-7"><!-- Lanlan: change width -->
                     <section aria-label="news"><!-- Lanlan: section + aria-label -->
-                        <div class="p-4 mt-4 mr-lg-3 bg-white"><!-- Lanlan -->
-                            <h2 class="text-primary mb-4 title">News &amp; events</h2><!-- Lanlan -->
-                            <article aria-labelledby="article1-heading" class="media mt-4"><!-- Lanlan -->
+                        <div class="p-4 mt-4 mr-lg-3 bg-white">
+                            <!-- Task 3.1-->
+                            <h2 class="text-primary mb-4 title">News &amp; events</h2>
+                            <!-- Task 3.2-->
+                            <article class="media mt-4" aria-label="Global temperature record">
                                 <img class="my-1 mr-2 rounded-right" src="./img/iceberg.jpg">
                                 <div class="media-body">
-                                    <h3 id="article1-heading" class="text-info mt-0 mb-2 subtitle"><!-- Lanlan -->
+                                    <!-- Task 3.1-->
+                                    <h3 class="text-info mt-0 mb-2 subtitle">
                                         <a href="./article.html">Global temperature record</a>
-                                    </h3><!-- Lanlan -->
+                                    </h3>                            
                                     <p>
                                         The global surface temperature relative to 1951-1980 average recently published by NASA shows that 2016 ranks as the warmest
                                         year on record.
@@ -144,13 +169,15 @@
                                         <div>2018/01/15</div>
                                     </div>
                                 </div>
-                            </article><!-- Lanlan -->
-                            <article aria-labelledby="article2-heading" class="media mt-4"><!-- Lanlan -->
+                            </article>
+                            <!-- Task 3.2-->
+                            <article class="media mt-4" aria-label="At iam decimum annum in spelunca iacet">
                                 <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg">
                                 <div class="media-body">
-                                    <h3 id="article2-heading" class="text-info mt-0 mb-2 subtitle"><!-- Lanlan -->
+                                    <!-- Task 3.1-->
+                                    <h3 class="text-info mt-0 mb-2 subtitle">
                                         <a href="./empty.html?title=Article">At iam decimum annum in spelunca iacet</a>
-                                    </h3><!-- Lanlan -->
+                                    </h3>
                                     <p>
                                         Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero satis. Claudii libidini, qui tum erat summo ne imperio,
                                         dederetur. Ergo id est convenienter naturae vivere, a natura discedere.
@@ -159,13 +186,15 @@
                                         <div>2018/01/12</div>
                                     </div>
                                 </div>
-                            </article><!-- Lanlan -->
-                            <article aria-labelledby="article3-heading" class="media mt-4"><!-- Lanlan -->
+                            </article>
+                            <!-- Task 3.2-->
+                            <article class="media mt-4" aria-label="Quo plebiscito decreta a senatu est consuli quaestio Cn">
                                 <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg">
                                 <div class="media-body">
-                                    <h3 id="article3-heading" class="text-info mt-0 mb-2 subtitle"><!-- Lanlan -->
+                                    <!-- Task 3.1-->
+                                    <h3 class="text-info mt-0 mb-2 subtitle">
                                         <a href="./empty.html?title=Article">Quo plebiscito decreta a senatu est consuli quaestio Cn</a>
-                                    </h3><!-- Lanlan -->
+                                    </h3>
                                     <p>
                                         Comprehensum, quod cognitum non habet? Quia nec honesto quic quam honestius nec turpi turpius. Maximeque eos videre possumus
                                         res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Est enim
@@ -175,65 +204,66 @@
                                         <div>2017/12/30</div>
                                     </div>
                                 </div>
-                            </article><!-- Lanlan -->
+                            </article>
                         </div>
-                    </section><!-- Lanlan -->
+                    </section>
                 </div>
 
                 <div class="col-12 col-lg-5"><!-- Lanlan: change width -->
                     <aside aria-label="studies" role="complementary"><!-- Lanlan: aside + aria-label -->
-                        <div class="p-4 mt-4 bg-white"><!-- Lanlan -->
-                            <h2 class="text-primary mb-4 title">Studies</h2><!-- Lanlan -->
+                        <!-- Task 3.1-->
+                        <div class="p-4 mt-4 bg-white">
+                            <h2 class="text-primary mb-4 title">Studies</h2>
                             <p class="font-weight-bold">Advance your scientific education</p>
-                            <ul class="list-unstyled ml-3"><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                            <ul class="list-unstyled ml-3">
+                                <li>
                                     <a href="./empty.html?title=Bachelor">Bachelor programmes</a>
-                                </li><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                                </li>
+                                <li>
                                     <a href="./empty.html?title=Bachelor">Master programmes</a>
-                                </li><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                                </li>
+                                <li>
                                     <a href="./empty.html?title=Continuing+education">Continuing education programmes</a>
-                                </li><!-- Lanlan -->
-                            </ul><!-- Lanlan -->
+                                </li>
+                            </ul>
                         </div>
-                    </aside><!-- Lanlan -->
+                    </aside>
 
                     <aside aria-label="researches" role="complementary"><!-- Lanlan: aside + aria-label -->
-                        <div class="p-4 mt-4 bg-white"><!-- Lanlan -->
-                            <h2 class="text-primary mb-4 title">Researches</h2><!-- Lanlan -->
+                        <div class="p-4 mt-4 bg-white">
+                            <h2 class="text-primary mb-4 title">Researches</h2>
                             <p class="font-weight-bold">Join our renowned research groups</p>
                             <p class="ml-3">
                                 <a href="./empty.html?title=Doctorate">Doctoral programmes</a>
                             </p>
                             <p class="font-weight-bold">Latest publications</p>
-                            <ul class="list-unstyled ml-3"><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                            <ul class="list-unstyled ml-3">
+                                <li>
                                     <a href="./empty.html?title=Article">Tuo vero id quidem, inquam, arbitratu</a>
-                                </li><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                                </li>
+                                <li>
                                     <a href="./empty.html?title=Article">Quantum Aristoxeni ingenium consumptum videmus in musicis</a>
-                                </li><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                                </li>
+                                <li>
                                     <a href="./empty.html?title=Article">Mihi quidem Antiochum, quem audis, satis belle videris attendere</a>
-                                </li><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                                </li>
+                                <li>
                                     <a href="./empty.html?title=Article">Nec enim figura corporis nec ratio excellens ingenii humani significat ad unam hanc rem natum
                                         hominem, ut frueretur voluptatibus</a>
-                                </li><!-- Lanlan -->
-                                <li><!-- Lanlan -->
+                                </li>
+                                <li>
                                     <a href="./empty.html?title=Article">Atque haec ita iustitiae propria sunt, ut sint virtutum reliquarum communia</a>
-                                </li><!-- Lanlan -->
-                            </ul><!-- Lanlan -->
+                                </li>
+                            </ul>
                         </div>
-                    </aside><!-- Lanlan -->
+                    </aside>
                 </div>
             </div>
         </div>
-    </main><!-- Lanlan -->
+    </main>
 
-    <footer class="footer" role="contentinfo"><!-- Lanlan -->
-        <div class="container-fluid bg-dark mt-4"><!-- Lanlan -->
+    <footer class="footer" role="contentinfo" id="footer">
+        <div class="container-fluid bg-dark mt-4">
             <div class="container text-center py-3">
                 <div class="row justify-content-around">
                     <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
@@ -244,7 +274,7 @@
                 </div>
             </div>
         </div>
-    </footer><!-- Lanlan -->
+    </footer>
 
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
