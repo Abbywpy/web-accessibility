@@ -48,3 +48,48 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.navbar-toggler')
         .addEventListener('click', toggleNavigation, false);
 }, false);
+
+
+// Task 3.5 - Menu Keyboard Interaction
+// Automatically close the submenu when the user presses the ESC key and focus on the menu header
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        // Check if any submenu is open
+        var openSubmenus = document.querySelectorAll('.dropdown-menu.show');
+        if (openSubmenus.length > 0) {
+            // Close the submenu
+            openSubmenus.forEach(function(submenu) {
+                submenu.classList.remove('show');
+            });
+            // Focus on the menu header
+            var menuHeaders = document.querySelectorAll('.nav-link.dropdown-toggle');
+            if (menuHeaders.length > 0) {
+                menuHeaders[0].focus();
+            }
+        }
+    }
+});
+
+// Allow activation of menu items using the SPACE key in addition to the ENTER key
+document.querySelectorAll('.nav-link').forEach(function(link) {
+    link.addEventListener('keydown', function(event) {
+        if (event.key === ' ' || event.key === 'Spacebar') {
+            event.preventDefault();
+            this.click();
+        }
+    });
+});
+
+// Close inactive menus when navigating outside using the TAB key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Tab') {
+        // Check if any submenu is open
+        var openSubmenus = document.querySelectorAll('.dropdown-menu.show');
+        if (openSubmenus.length > 0) {
+            // Close the submenu
+            openSubmenus.forEach(function(submenu) {
+                submenu.classList.remove('show');
+            });
+        }
+    }
+});
