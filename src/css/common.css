@@ -6,24 +6,28 @@ body,
 html {
     height: 100%
 }
+/* Lanlan: Start Modifying Color*/
+body a {
+    color: #0066CC
+}
 
-body a,
 body div,
 body p {
-    color: #dfdfdf
+    color: #333333
 }
 
 body a:hover {
-    color: #cdcdcd
+    color: #CC0000
 }
-
+/* Lanlan: Finish Modifying Color*/
 .title {
     font-size: 2rem;
     font-weight: 100
 }
 
 .subtitle {
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    font-weight: 400/* Lanlan */
 }
 
 .header .logo {
