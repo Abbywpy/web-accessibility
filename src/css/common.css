@@ -60,7 +60,7 @@ body a:hover {
 Style for skip link */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 0;
     background-color: #333;
     color: #fff;
@@ -72,6 +72,8 @@ Style for skip link */
 
 .skip-link:focus {
     opacity: 1; /* Makes the skip link visible when focused */
+    top: 0;
+    left: 0;
 }
 
 .skip-link:focus:not(:focus-visible) {
