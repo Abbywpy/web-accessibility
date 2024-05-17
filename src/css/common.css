@@ -7,14 +7,17 @@ html {
     height: 100%
 }
 
-body a,
+body a {
+    color: #0066CC
+}
+
 body div,
 body p {
-    color: #dfdfdf
+    color: #333333
 }
 
 body a:hover {
-    color: #cdcdcd
+    color: #CC0000
 }
 
 .title {
@@ -23,7 +26,8 @@ body a:hover {
 }
 
 .subtitle {
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    font-weight: 400
 }
 
 .header .logo {

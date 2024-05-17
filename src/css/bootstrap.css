@@ -2244,14 +2244,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #4b6660;
-    border-color: #4b6660
+    background-color: #737373;
+    border-color: #737373
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #3b504b;
-    border-color: #354944
+    background-color: #333333;
+    border-color: #000000
 }
 
 .btn-primary.focus,
@@ -2510,14 +2510,16 @@ fieldset:disabled a.btn {
 
 .btn-dark {
     color: #fff;
-    background-color: #343a40;
-    border-color: #343a40
+    background-color: #343A40BF;
+    border-color: #343A40BF
 }
 
 .btn-dark:hover {
     color: #fff;
     background-color: #23272b;
-    border-color: #1d2124
+    border-color: #1d2124;
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color
 }
 
 .btn-dark.focus,
@@ -3089,7 +3091,7 @@ tbody.collapse.show {
 .dropdown-item:hover {
     color: #16181b;
     text-decoration: none;
-    background-color: #f8f9fa
+    background-color: #bcc0c4
 }
 
 .dropdown-item.active,
@@ -3619,13 +3621,16 @@ tbody.collapse.show {
 }
 
 .nav-link {
+    color: #dfdfdf !important;
     display: block;
     padding: .5rem 1rem
 }
 
 .nav-link:focus,
 .nav-link:hover {
-    text-decoration: none
+    text-decoration: none;
+    color: #343a40 !important;
+    background-color: #dfdfdf
 }
 
 .nav-link.disabled {
@@ -4086,8 +4091,17 @@ tbody.collapse.show {
     border-color: hsla(0, 0%, 100%, .1)
 }
 
+.navbar-dark .navbar-toggler:hover {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color
+}
+
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.navbar-dark .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
 }
 
 .navbar-dark .navbar-text {
@@ -8184,7 +8198,7 @@ button.bg-dark:hover {
 }
 
 .text-primary {
-    color: #4b6660 !important
+    color: #333333 !important
 }
 
 a.text-primary:focus,
@@ -8193,7 +8207,7 @@ a.text-primary:hover {
 }
 
 .text-secondary {
-    color: #6c757d !important
+    color: #555F62 !important
 }
 
 a.text-secondary:focus,

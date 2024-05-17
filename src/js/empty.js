@@ -1,5 +1,5 @@
 /**
- * Get the value correspondin to the query parameter
+ * Get the value corresponding to the query parameter
  * @param {string} name - The name of the url query parameter
  * @return {string} The value of the query paramter
  */
