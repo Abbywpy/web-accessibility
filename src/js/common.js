@@ -78,15 +78,14 @@ document.addEventListener('keydown', function (event) {
         // Check if any submenu is open
         var openSubmenus = document.querySelectorAll('.dropdown-menu.show');
         if (openSubmenus.length > 0) {
-            // Close the submenu
-            openSubmenus.forEach(function (submenu) {
+            // Focus on the menu header of the closed submenu
+            openSubmenus.forEach(function(submenu) {
                 submenu.classList.remove('show');
+                var menuHeader = submenu.parentNode.querySelector('.nav-link.dropdown-toggle');
+                if (menuHeader) {
+                    menuHeader.focus();
+                }
             });
-            // Focus on the menu header
-            var menuHeaders = document.querySelectorAll('.nav-link.dropdown-toggle');
-            if (menuHeaders.length > 0) {
-                menuHeaders[0].focus();
-            }
         }
     }
 });
